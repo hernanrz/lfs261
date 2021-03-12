@@ -1,5 +1,7 @@
 pipeline {
-  agent 'metr0'
+  agent {
+    label 'metr0'
+  }
 
   stages {
     stage('build') {
