@@ -1,6 +1,9 @@
 pipeline {
   agent {
     label 'metr0'
+    docker {
+      image 'node:alpine'
+    }
   }
 
   stages {
