@@ -8,12 +8,14 @@ pipeline {
   stages {
     stage('build') {
       steps {
+        dir 'result'
         sh 'npm install'
       }
     }
 
     stage('test') {
       steps {
+        dir 'result'
         sh 'npm test'
       }
     }
