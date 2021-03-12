@@ -1,0 +1,13 @@
+pipeline {
+  agent 'metr0'
+
+  stages {
+    stage('build') {
+      sh 'npm install'
+    }
+
+    stage('test') {
+      sh 'npm test'
+    }
+  }
+}
