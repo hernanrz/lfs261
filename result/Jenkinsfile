@@ -3,6 +3,8 @@ pipeline {
     label 'metr0'
   }
 
+  tools { nodejs 'node15' }
+
   stages {
     stage('build') {
       steps {
