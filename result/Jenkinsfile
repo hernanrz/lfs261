@@ -22,6 +22,8 @@ pipeline {
   }
 
   post {
-    discordSend description: 'Jenkins build finished', link: env.BUILD_URL, result: currentBuild.currentResult, title: JOB_NAME, webhookURL: "https://discord.com/api/webhooks/828137318556762112/LMeK8IHzSUEpTuCRR1RqqzP5ZT7jQ-Z2i6OUvMzCaTAqEZbp-mH1QalhvVnW4aWiKPu0"
+    always {
+      discordSend description: 'Jenkins build finished', link: env.BUILD_URL, result: currentBuild.currentResult, title: JOB_NAME, webhookURL: "https://discord.com/api/webhooks/828137318556762112/LMeK8IHzSUEpTuCRR1RqqzP5ZT7jQ-Z2i6OUvMzCaTAqEZbp-mH1QalhvVnW4aWiKPu0"
+    }
   }
 }
